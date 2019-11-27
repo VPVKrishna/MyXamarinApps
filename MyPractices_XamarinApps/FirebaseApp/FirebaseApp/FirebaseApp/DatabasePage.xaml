@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FirebaseApp"
+             x:Class="FirebaseApp.DatabasePage">
+    <ContentPage.Content>
+        <StackLayout >
+            <Entry x:Name="UserId" 
+                   WidthRequest="1"
+                   Keyboard="Numeric"
+                   Placeholder="Enter Id here">
+                <Entry.Behaviors>
+                    <local:NumericValidationBehavior/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry x:Name="UserName" 
+                   WidthRequest="1" 
+                   Placeholder="Enter Name here"/>
+            <StackLayout>
+                <Button x:Name="AddRecord" 
+                        Text="Add" 
+                        Clicked="AddRecord_Clicked"/>
+                <Button x:Name="UpdateRecord" 
+                        Text="Update" 
+                        Clicked="UpdateRecord_Clicked"/>
+                <Button x:Name="GetRecord" 
+                        Text="Get" 
+                        Clicked="GetRecord_Clicked"/>
+                <Button x:Name="DeleteRecord" 
+                        Text="Delete" 
+                        Clicked="DeleteRecord_Clicked" />
+            </StackLayout>
+
+            <ListView x:Name="EmployeeRecordList" HasUnevenRows="true" ItemSelected="EmployeeRecordList_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell 
+                            Text="{Binding Id}" 
+                            Detail="{Binding Name}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

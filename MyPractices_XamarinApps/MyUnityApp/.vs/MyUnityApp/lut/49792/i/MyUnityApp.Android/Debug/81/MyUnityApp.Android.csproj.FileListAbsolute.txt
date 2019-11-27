@@ -1,0 +1,2 @@
+C:\Users\VA20051593\source\repos\MyUnityApp\.vs\MyUnityApp\lut\0\i\MyUnityApp.Android\Debug\81\MyUnityApp.Android.nuget.stamp
+C:\Users\VA20051593\source\repos\MyUnityApp\.vs\MyUnityApp\lut\0\i\MyUnityApp.Android\Debug\81\MonoAndroid,Version=v8.1.AssemblyAttributes.cs

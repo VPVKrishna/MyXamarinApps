@@ -1,0 +1,3 @@
+C:\Users\VA20051593\source\repos\MyUnityApp\.vs\MyUnityApp\lut\0\i\MyUnityNUnitApp\Debug\netcoreapp2.1\MyUnityNUnitApp.csproj.CoreCompileInputs.cache
+C:\Users\VA20051593\source\repos\MyUnityApp\.vs\MyUnityApp\lut\0\i\MyUnityNUnitApp\Debug\netcoreapp2.1\MyUnityNUnitApp.AssemblyInfoInputs.cache
+C:\Users\VA20051593\source\repos\MyUnityApp\.vs\MyUnityApp\lut\0\i\MyUnityNUnitApp\Debug\netcoreapp2.1\MyUnityNUnitApp.AssemblyInfo.cs

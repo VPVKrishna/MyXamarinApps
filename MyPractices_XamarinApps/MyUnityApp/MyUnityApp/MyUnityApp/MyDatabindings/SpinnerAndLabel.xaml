@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyUnityApp.MyDatabindings.SpinnerAndLabel"
+             Title="Label Rotation on Slider"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+
+            <!--Rotating the label on slider progress changes-->
+            <Slider
+                x:Name="mySlider_1"
+                Maximum="360"
+                Minimum="0"
+                Value="30"            
+                BackgroundColor="Aqua"
+                VerticalOptions="StartAndExpand"
+                />
+
+            <Label Text="{Binding Source={x:Reference mySlider_1},
+                      Path=Value,
+                      StringFormat='The slider value is {0:F2}'}" />
+            
+            <Label 
+                x:Name="myLabel_1"
+                Text="Rotation Label"
+                FontSize="Large"
+                BindingContext="{x:Reference mySlider_1}"
+                Rotation="{Binding Value}"
+                VerticalOptions="Start"
+                HorizontalOptions="StartAndExpand" />
+
+            
+            
+            <!--Scale the label on slider progress changes-->
+            <Label 
+               x:Name="myLabel_2"
+               Text="TEXT"
+               FontSize="40"
+               HorizontalOptions="Start"
+               VerticalOptions="Start"
+               Scale="{Binding Source={x:Reference mySlider_2},
+                               Path=Value}" />
+
+            <Label Text="TEXT"
+       FontSize="40"
+       HorizontalOptions="Start"
+       VerticalOptions="Start">
+                <Label.Scale>
+                    <Binding Path="Value">
+                        <Binding.Source>
+                            <x:Reference Name="mySlider_2" />
+                        </Binding.Source>
+                    </Binding>
+                </Label.Scale>
+            </Label>
+
+            <Slider 
+                x:Name="mySlider_2"
+                Minimum="-2"
+                Maximum="2"
+                VerticalOptions="StartAndExpand" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

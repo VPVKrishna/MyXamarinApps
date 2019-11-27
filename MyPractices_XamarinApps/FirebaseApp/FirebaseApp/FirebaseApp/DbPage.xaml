@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FirebaseApp"
+             x:Class="FirebaseApp.DbPage">
+    <ContentPage.Content>
+        <StackLayout >
+            <Entry x:Name="UserId" 
+                   WidthRequest="1"
+                   Keyboard="Numeric"
+                   Placeholder="Enter Id here">
+                <Entry.Behaviors>
+                    <local:NumericValidationBehavior/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry x:Name="UserName" 
+                   WidthRequest="1" 
+                   Placeholder="Enter Name here"/>
+            <StackLayout>
+                <Button x:Name="AddRecord" 
+                        Text="Add" 
+                        Clicked="BtnAdd_Clicked"/>
+                <Button x:Name="UpdateRecord" 
+                        Text="Update" 
+                        Clicked="BtnUpdate_Clicked"/>
+                <Button x:Name="GetRecord" 
+                        Text="Get" 
+                        Clicked="BtnGet_Clicked"/>
+                <Button x:Name="DeleteRecord" 
+                        Text="Delete" 
+                        Clicked="BtnDelete_Clicked" />
+            </StackLayout>
+
+            <ActivityIndicator x:Name="ProgressBar" Color="Red" IsRunning="{Binding IsRunningProgress}"/>
+
+            <ListView x:Name="UserRecordList" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell 
+                            Text="{Binding Id}" 
+                            Detail="{Binding Name}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

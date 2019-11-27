@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirebaseApp.MainPage">
+
+    <StackLayout>
+        <Button x:Name="btnFbMessaging" 
+                Text="Messaging"
+                Clicked="BtnFbMessaging_Clicked"
+                />
+        <Button x:Name="btnFbStorage" 
+                Text="Storage"
+                Clicked="BtnFbStorage_Clicked"
+                />
+        <Button x:Name="btnSqliteDatabase" 
+                Text="SqliteDatabase"
+                Clicked="BtnSqliteDatabase_Clicked"
+                />
+        <Button x:Name="btnLocalList" 
+                Text="Local List Repository"
+                Clicked="BtnLocalList_Clicked"
+                />
+
+        <Button x:Name="btnFirebaseList" 
+                Text="Firebase data Repository"
+                Clicked="BtnFirebaseDatabase_Clicked"
+                />
+
+        <Button x:Name="btnPreference" 
+                Text="Shared Preference Repository"
+                Clicked="BtnPreference_Clicked"
+                />
+        
+        <Button x:Name="btnFbAuth" 
+                Text="FbAuthentication"
+                Clicked="BtnFbAuth_Clicked"
+                />
+        
+    </StackLayout>
+
+</ContentPage>

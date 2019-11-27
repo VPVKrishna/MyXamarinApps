@@ -1,0 +1,201 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": "33f6c8c3b121736d4933c87d15a88cdb81a15e2a"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "MyUnityApp/1.0.0": {
+        "dependencies": {
+          "CommonServiceLocator": "2.0.5",
+          "NETStandard.Library": "2.0.3",
+          "Refit": "5.0.15",
+          "Unity": "5.10.2",
+          "Unity.ServiceLocation": "5.10.0",
+          "Xamarin.Forms": "3.4.0.1008975",
+          "Microsoft.CodeAnalysis.LiveUnitTesting.Runtime": "1.9.0.0"
+        },
+        "runtime": {
+          "MyUnityApp.dll": {}
+        }
+      },
+      "CommonServiceLocator/2.0.5": {
+        "runtime": {
+          "lib/netstandard2.0/CommonServiceLocator.dll": {
+            "assemblyVersion": "2.0.5.0",
+            "fileVersion": "2.0.5.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
+      "Refit/5.0.15": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Refit.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.15.20281"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "4.0.4.1",
+            "fileVersion": "4.6.26919.2"
+          }
+        }
+      },
+      "Unity/5.10.2": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Unity.Abstractions.dll": {
+            "assemblyVersion": "4.1.2.0",
+            "fileVersion": "4.1.2.0"
+          },
+          "lib/netstandard2.0/Unity.Container.dll": {
+            "assemblyVersion": "5.10.2.0",
+            "fileVersion": "5.10.2.0"
+          }
+        }
+      },
+      "Unity.Abstractions/4.1.1": {},
+      "Unity.ServiceLocation/5.10.0": {
+        "dependencies": {
+          "CommonServiceLocator": "2.0.5",
+          "Unity.Abstractions": "4.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Unity.ServiceLocation.dll": {
+            "assemblyVersion": "5.10.0.0",
+            "fileVersion": "5.10.0.0"
+          }
+        }
+      },
+      "Xamarin.Forms/3.4.0.1008975": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "Microsoft.CodeAnalysis.LiveUnitTesting.Runtime/1.9.0.0": {
+        "runtime": {
+          "Microsoft.CodeAnalysis.LiveUnitTesting.Runtime.dll": {
+            "assemblyVersion": "1.9.0.0",
+            "fileVersion": "1.9.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MyUnityApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CommonServiceLocator/2.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Md2q9f6hAuUAm6IWTybQbYvxhDAs2dqmsudVDghpg0Q+C0M2KkmiTDjeGx1PsYhnZPvp+hy1Cx99v0VPW9W6/g==",
+      "path": "commonservicelocator/2.0.5",
+      "hashPath": "commonservicelocator.2.0.5.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "Refit/5.0.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PTxAYvt0roXHXO4X2t2N7jhLZgkMteUidOJx91k2mJCMYKbu3BSnnbp4hdYa509nF9UTm0bMdd82rbiypf0Tzw==",
+      "path": "refit/5.0.15",
+      "hashPath": "refit.5.0.15.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+    },
+    "Unity/5.10.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oLd9RKhgwMURy/vABo5jZFovgUr5QGqfl1SqPJpu2boug43aQc4ghnuVPgnu/H9C83DIDhNgHaXmyYC3z9t72Q==",
+      "path": "unity/5.10.2",
+      "hashPath": "unity.5.10.2.nupkg.sha512"
+    },
+    "Unity.Abstractions/4.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a2AMzQRR/UQwbQKcp+1EMYElSqTblF79vWNiz+rEX2umIv3DGlQD+CfAgtVMy1VcE5Bt/S/3bN/U2D+JcdZJsQ==",
+      "path": "unity.abstractions/4.1.1",
+      "hashPath": "unity.abstractions.4.1.1.nupkg.sha512"
+    },
+    "Unity.ServiceLocation/5.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lExoo4Wa9Y0qrdHCodsDmotWsdZpRclbrWTE46KRzWWccQ9jp/EpqDlEbSsUsebdxrn2mXA7+1+YC35G5QU8lw==",
+      "path": "unity.servicelocation/5.10.0",
+      "hashPath": "unity.servicelocation.5.10.0.nupkg.sha512"
+    },
+    "Xamarin.Forms/3.4.0.1008975": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tM9syeev45u92OFENGjq+Zw8WiEwLJFiXe317XpL9SY2RRk9sm2fc1lDVjzwz0da+5ZP5fi24NAPsPQdxBdMwQ==",
+      "path": "xamarin.forms/3.4.0.1008975",
+      "hashPath": "xamarin.forms.3.4.0.1008975.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.LiveUnitTesting.Runtime/1.9.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

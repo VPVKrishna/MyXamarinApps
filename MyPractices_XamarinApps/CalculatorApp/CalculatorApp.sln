@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorApp.Android", "CalculatorApp\CalculatorApp.Android\CalculatorApp.Android.csproj", "{9071CAE3-99A4-4C13-AFB1-85EFDD78273E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorApp", "CalculatorApp\CalculatorApp\CalculatorApp.csproj", "{DC50983F-5192-43BB-9556-2F1E4EBEA519}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9071CAE3-99A4-4C13-AFB1-85EFDD78273E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9071CAE3-99A4-4C13-AFB1-85EFDD78273E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9071CAE3-99A4-4C13-AFB1-85EFDD78273E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9071CAE3-99A4-4C13-AFB1-85EFDD78273E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9071CAE3-99A4-4C13-AFB1-85EFDD78273E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9071CAE3-99A4-4C13-AFB1-85EFDD78273E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DC50983F-5192-43BB-9556-2F1E4EBEA519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC50983F-5192-43BB-9556-2F1E4EBEA519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC50983F-5192-43BB-9556-2F1E4EBEA519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC50983F-5192-43BB-9556-2F1E4EBEA519}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E76A17A4-7C1F-4341-A20E-5B9AE3AB5937}
+	EndGlobalSection
+EndGlobal

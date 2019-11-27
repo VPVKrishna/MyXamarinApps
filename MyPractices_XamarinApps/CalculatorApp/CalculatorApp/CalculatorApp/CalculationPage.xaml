@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CalculatorApp"
+             x:Class="CalculatorApp.CalculationPage"
+             Title = "Calculator - XAML"
+             BackgroundColor="#404040"
+             >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="DigitStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="36"/>
+            </Style>
+            <Style x:Key="LabelStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="36"/>
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="BorderWidth" Value="0"/>
+            </Style>
+            <Style x:Key="LabelStyleOperator" TargetType="Button">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="36"/>
+                <Setter Property="BackgroundColor" Value="#E8AD00"/>
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="BorderWidth" Value="0"/>
+            </Style>
+            <Style x:Key="LabelStyleSpecialOperator" TargetType="Button">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="36"/>
+                <Setter Property="BackgroundColor" Value="LightGray"/>
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="BorderWidth" Value="0"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+
+    <StackLayout VerticalOptions="EndAndExpand">
+
+        <Label x:Name="entryTotal" HorizontalTextAlignment="End" Text="" Margin="0,0,0,0" 
+               Style="{StaticResource DigitStyle}"/>
+        <Label x:Name="entryOpr" HorizontalTextAlignment="End" Text="" XAlign="End" Margin="0,0,0,0"
+               Style="{StaticResource DigitStyle}"/>
+        <Label x:Name="entryCurrent" HorizontalTextAlignment="End" Text="0"  Margin="0,0,0,0"
+               Style="{StaticResource DigitStyle}"/>
+
+        <Grid Padding="0" Margin="0" RowSpacing="0" ColumnSpacing="0" BackgroundColor="#EEEEEE">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+
+            <Button Text="C"   Grid.Row="0" Grid.Column="0" x:Name="clear"      Clicked="ButtonClickEvent" Style="{StaticResource LabelStyleSpecialOperator}"/>
+            <Button Text="+/-" Grid.Row="0" Grid.Column="1" x:Name="plus_minus" Clicked="ButtonClickEvent" Style="{StaticResource LabelStyleSpecialOperator}"/>
+            <Button Text="%"   Grid.Row="0" Grid.Column="2" x:Name="remainder"  Clicked="ButtonClickEvent" Style="{StaticResource LabelStyleSpecialOperator}"/>
+            <Button Text="DIV" Grid.Row="0" Grid.Column="3" x:Name="div"        Clicked="ButtonClickEvent" Style="{StaticResource LabelStyleOperator}"/>
+
+            <Button Text="7" Grid.Row="1" Grid.Column="0" x:Name="seven"    Clicked="ButtonClickEvent" Style="{StaticResource LabelStyle}"/>
+            <Button Text="8" Grid.Row="1" Grid.Column="1" x:Name="eight"    Clicked="ButtonClickEvent" Style="{StaticResource LabelStyle}"/>
+            <Button Text="9" Grid.Row="1" Grid.Column="2" x:Name="nine"     Clicked="ButtonClickEvent" Style="{StaticResource LabelStyle}"/>
+            <Button Text="X" Grid.Row="1" Grid.Column="3" x:Name="multiply" Clicked="ButtonClickEvent" Style="{StaticResource LabelStyleOperator}"/>
+
+            <Button Text="4" Grid.Row="2" Grid.Column="0" x:Name="four"  Clicked="ButtonClickEvent" Style="{StaticResource LabelStyle}"/>
+            <Button Text="5" Grid.Row="2" Grid.Column="1" x:Name="five"  Clicked="ButtonClickEvent" Style="{StaticResource LabelStyle}"/>
+            <Button Text="6" Grid.Row="2" Grid.Column="2" x:Name="six"   Clicked="ButtonClickEvent" Style="{StaticResource LabelStyle}"/>
+            <Button Text="-" Grid.Row="2" Grid.Column="3" x:Name="minus" Clicked="ButtonClickEvent" Style="{StaticResource LabelStyleOperator}"/>
+
+            <Button Text="1" Grid.Row="3" Grid.Column="0" x:Name="one"   Clicked="ButtonClickEvent" Style="{StaticResource LabelStyle}"/>
+            <Button Text="2" Grid.Row="3" Grid.Column="1" x:Name="two"   Clicked="ButtonClickEvent" Style="{StaticResource LabelStyle}"/>
+            <Button Text="3" Grid.Row="3" Grid.Column="2" x:Name="three" Clicked="ButtonClickEvent" Style="{StaticResource LabelStyle}"/>
+            <Button Text="+" Grid.Row="3" Grid.Column="3" x:Name="plus"  Clicked="ButtonClickEvent" Style="{StaticResource LabelStyleOperator}"/>
+
+            <Button Text="0" Grid.Row="4" Grid.Column="0" x:Name="zero"   Clicked="ButtonClickEvent" Grid.ColumnSpan="2" Style="{StaticResource LabelStyle}"/>
+            <Button Text="." Grid.Row="4" Grid.Column="2" x:Name="dot"    Clicked="ButtonClickEvent" Style="{StaticResource LabelStyle}"/>
+            <Button Text="=" Grid.Row="4" Grid.Column="3" x:Name="equals" Clicked="ButtonClickEvent" Style="{StaticResource LabelStyleOperator}"/>
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>

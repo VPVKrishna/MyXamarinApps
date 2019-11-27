@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:Behaviors;assembly=Behaviors"
+             xmlns:local="clr-namespace:FirebaseApp.View"
+             x:Class="FirebaseApp.View.Pages.BookStorePage">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Picker 
+                x:Name="OperationPicker"
+                Title="Select Option"
+                TitleColor="Red"
+                HorizontalOptions="FillAndExpand" 
+                SelectedItem="{Binding SelectedPickerItem, Mode=TwoWay}">
+                <Picker.Items>
+                    <x:String>Add Book</x:String>
+                    <x:String>Update Book</x:String>
+                    <x:String>Delete Book</x:String>
+                    <x:String>Get Book</x:String>
+                    <x:String>Show Book List</x:String>
+                </Picker.Items>
+                <Picker.Behaviors>
+                    <behaviors:EventHandlerBehavior EventName="SelectedIndexChanged">
+                        <behaviors:InvokeCommandAction Command="{Binding OperationPickerItemSelectionChanged}" CommandParameter="{x:Reference OperationPicker}"/>
+                    </behaviors:EventHandlerBehavior>
+                </Picker.Behaviors>
+            </Picker>
+
+            <StackLayout >
+                
+            </StackLayout>
+            
+            <!--Approach 1 && Better Approach-->
+            <Entry x:Name="entryId"
+                   BindingContext="{x:Binding BookIdBlock}"
+                   Text="{Binding Text, Mode=TwoWay}"
+                   WidthRequest="1"
+                   Keyboard="Numeric"
+                   IsEnabled="{Binding IsEnabled}"
+                   IsVisible="{Binding IsVisible}"
+                   ReturnCommand="{Binding EntryCompleteCommand}"
+                   ReturnCommandParameter="{x:Reference entryName}"
+                   Placeholder="{Binding Hint}"/>
+            <!-- Used here BindingContext for binding the model"-->
+            <!--Approach 1-->
+
+            <!--Approach 2-->
+            <local:CustomEntry x:Name="entryName"
+                   local:NextEntry="{x:Reference entryAuthor}"
+                   Text="{Binding BookNameBlock.Text, Mode=TwoWay}"
+                   WidthRequest="1" 
+                   IsEnabled="{Binding BookNameBlock.IsEnabled}"
+                   IsVisible="{Binding BookNameBlock.IsVisible}"
+                   Placeholder="{Binding BookNameBlock.Hint}"/>
+            <!-- Used here BindingContext for binding the view model"-->
+            <!-- To move the focus to the next view used here 'local:CustomEntry' with 'local:NextEntry="{x:Reference entryAuthor}' -->
+            <!--Approach 2-->
+
+            <Entry x:Name="entryAuthor"
+                   BindingContext="{x:Binding BookAuthorBlock}"
+                   Text="{Binding Text, Mode=TwoWay}"
+                   WidthRequest="1"
+                   IsEnabled="{Binding IsEnabled}"
+                   IsVisible="{Binding IsVisible}"
+                   ReturnCommand="{Binding EntryCompleteCommand}"
+                   ReturnCommandParameter="{x:Reference entryPublisher}"
+                   Placeholder="{Binding Hint}"/>
+            <!-- To move the focus to the next view used here 'ReturnCommand' & 'ReturnCommandParameter' -->
+
+            <Entry x:Name="entryPublisher"
+                   BindingContext="{x:Binding BookPublisherBlock}"
+                   Text="{Binding Text, Mode=TwoWay}"
+                   WidthRequest="1"
+                   IsEnabled="{Binding IsEnabled}"
+                   IsVisible="{Binding IsVisible}"
+                   ReturnCommand="{Binding EntryCompleteCommand}"
+                   ReturnCommandParameter="{x:Reference entryPublishedOn}"
+                   Placeholder="{Binding Hint}"/>
+
+            <Entry x:Name="entryPublishedOn"
+                   BindingContext="{x:Binding BookPublishedOnBlock}"
+                   Text="{Binding Text, Mode=TwoWay}"
+                   WidthRequest="1"
+                   IsEnabled="{Binding IsEnabled}"
+                   IsVisible="{Binding IsVisible}"                   
+                   Placeholder="{Binding Hint}"/>
+
+            <StackLayout>
+                <!--<Button 
+                    Text="Add" 
+                    Clicked="BtnAdd_Clicked"/>
+                <Button
+                    Text="Update" 
+                    Clicked="BtnUpdate_Clicked"/>
+                <Button
+                    Text="Get" 
+                    Clicked="BtnGet_Clicked"/>
+                <Button
+                    Text="Delete" 
+                    Clicked="BtnDelete_Clicked" />-->
+                <!--<Button
+                    Text="Show List" 
+                    Clicked="BtnShowList_Clicked" />-->
+                <Button
+                    Text="Submit"
+                    Command="{Binding PerformSubmitOperation}"/>
+                
+            </StackLayout>
+
+            <ListView ItemsSource="{Binding BookModelCollection}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" Detail="{Binding Id}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

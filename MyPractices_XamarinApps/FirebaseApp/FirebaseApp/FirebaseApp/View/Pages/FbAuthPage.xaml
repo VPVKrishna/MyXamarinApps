@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirebaseApp.View.Pages.FbAuthPage">
+    <ContentPage.Content>
+        <StackLayout Padding="30">
+            <Entry 
+                x:Name="entryUserName"
+                Placeholder="Enter user name"
+                VerticalOptions="Start" 
+                HorizontalOptions="FillAndExpand" />
+
+            <Entry 
+                x:Name="entryPassword"
+                Placeholder="Enter password"
+                VerticalOptions="Start" 
+                HorizontalOptions="FillAndExpand" />
+
+            <Button x:Name="buttonLogin"
+                    Text="Login"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="ButtonLogin_Clicked"
+                    />
+            <Button x:Name="buttonRegister"
+                    Text="Register"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="Transparent"
+                    Clicked="ButtonRegister_Clicked"
+                    />
+            <Button x:Name="buttonForgotPassword"
+                    Text="Forgot Password"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="Transparent"
+                    Clicked="ButtonForgotPassword_Clicked"
+                    />
+
+            <Button x:Name="buttonFetchProviders"
+                    Text="Fetch Providers"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="Transparent"
+                    Clicked="ButtonFetchProviders_Clicked"
+                    />
+
+            <Button x:Name="buttonSendVerificationCode"
+                    Text="Send Verification Code"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="Transparent"
+                    Clicked="ButtonSendVerificationCode_Clicked"
+                    />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1"
+             x:Class="App1.MainPage">
+
+    <StackLayout>
+
+        <Image 
+            x:Name="image_logo"
+            WidthRequest="100"
+            HeightRequest="100"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"
+            />
+
+        <Entry 
+            Placeholder="Username" 
+            HorizontalOptions="Center"
+            VerticalOptions="Start"/>
+
+        <Entry 
+            Placeholder="Password" 
+            HorizontalOptions="Center"
+            VerticalOptions="Start"/>
+
+        <Label 
+            Text="Forgot password?" 
+            HorizontalOptions="Center"
+            VerticalOptions="Start" />
+
+        <Button 
+            Text="Login" Clicked="Button_Clicked"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"/>
+        
+        <Button 
+            Text="Sign up"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"/>
+        
+    </StackLayout>
+
+</ContentPage>

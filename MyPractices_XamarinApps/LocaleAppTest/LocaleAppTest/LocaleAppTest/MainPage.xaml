@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LocaleAppTest"
+             xmlns:translator="clr-namespace:LocaleAppTest.Helper" 
+             x:Class="LocaleAppTest.MainPage">
+
+    <StackLayout>
+
+        <local:LineView 
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            Margin="20"
+            />
+
+        <local:CustomListView 
+            x:Name="myCustomLisView"
+            HorizontalOptions="Start"
+            VerticalOptions="Start" 
+            ItemsSource="{Binding Items}"
+            IsScrollingEnable="false"
+            HasUnevenRows="True"
+            Margin="20" >
+            <local:CustomListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding .}" TextColor="Black" />
+                    </ViewCell>
+                </DataTemplate>
+            </local:CustomListView.ItemTemplate>
+        </local:CustomListView>
+
+        <Button 
+            x:Name="addItem"
+            HorizontalOptions="StartAndExpand"
+            VerticalOptions="Start"
+            Clicked="AddItem_Clicked"
+            Text="Add Item" />
+        
+        <Button 
+            x:Name="changeLocale"
+            HorizontalOptions="StartAndExpand"
+            VerticalOptions="Start"
+            Clicked="ChangeLocale_Clicked"
+            Text="Change Locale" />
+        
+        <Label 
+            x:Name="myLabel"
+            HorizontalOptions="Start"
+            VerticalOptions="Start" />
+    </StackLayout>
+
+</ContentPage>

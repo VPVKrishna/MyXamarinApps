@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PrismApp.Views"
+             x:Class="PrismApp.Views.MainPage"
+             Title="{Binding Title}">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="Welcome to Xamarin Forms and Prism!" />
+        <Entry 
+            x:Name="entryName" Text=""
+            Placeholder="Enter name">
+            <Entry.Triggers>
+                <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                    <Setter Property="BackgroundColor" Value="Aqua"/>
+                </Trigger>
+                <Trigger TargetType="Entry" Property="IsFocused" Value="False">
+                    <Setter Property="BackgroundColor" Value="BlueViolet"/>
+                </Trigger>
+                <EventTrigger Event="TextChanged">
+                    <local:NumberValidationTrigger />
+                </EventTrigger>
+            </Entry.Triggers>
+        </Entry>
+        <Button x:Name="buttonSubmit" Text="Submit" >
+            <Button.Triggers>
+                <!--<DataTrigger TargetType="Button" 
+                             Binding="{Binding Source={x:Reference entryName}, Path=Text.Length}" Value="0">
+                    <Setter Property="TextColor" Value="Cyan"/>
+                </DataTrigger>-->
+            </Button.Triggers>
+
+        </Button>
+    </StackLayout>
+
+</ContentPage>
